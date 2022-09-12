@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURD.MJ</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./ex.js"></script>
+</head>
+<body>
+    <div class="curd">
+        <div class="head">
+            <h2>CRUD.MJ</h2>
+            <p>TABLE MANAGEMENT</p>
+        </div>
+        <hr>
+
+        <h3>1- Convert excel table to the table management</h3>
+        <h5><span>WARNING:</span> header of excel table must be exactly the same of the table management header but <span>without (ID,EDIT,DELETE) column's</span></h5>
+        <label class="excel">
+            <input type="file" id="fileUpload" placeholder="Upload Your Excel File" accept=".xls,.xlsx">
+            <button type="button" id="uploadExcel">CONVERT</button>
+        </label>    
+        <hr>
+
+        <h3>2- Fill in the data manually</h3>
+        <div class="inputs">
+            <input type="text" id="a1" placeholder="a1">
+            <input type="text" id="a2"placeholder="a2">
+            <input type="text" id="a3"placeholder="a3">
+            <input type="text" id="a4"placeholder="a4">
+            <input type="text" id="a5"placeholder="a5">
+            <input type="text" id="a6"placeholder="a6">
+            <input type="text" id="a7"placeholder="a7">
+            <input type="text" id="a8"placeholder="a8">
+            <input type="text" id="a9"placeholder="a9">
+            <input type="text" id="a10"placeholder="a10">
+            <input type="text" id="a11"placeholder="a11">
+            <input type="text" id="a12"placeholder="a12">
+            <button id="submit">CREATE</button>
+        </div>
+<hr>
+
+        <div class="outputs">
+            <div class="searchBlock">
+                 <div class="btnSearch">
+                    <button onclick="getSearchMood(this.id)" id="searchA1" >Search By A1</button>
+                    <button onclick="getSearchMood(this.id)" id="searchA2" >Search By A2</button>
+                    <button onclick="getSearchMood(this.id)" id="searchA3" >Search By A3</button>
+                    <button onclick="getSearchMood(this.id)" id="searchA4" >Search By A4</button>
+                    <button onclick="getSearchMood(this.id)" id="searchA5" >Search By A5</button>
+                    <button onclick="getSearchMood(this.id)" id="searchA6" >Search By A6</button>
+                    <button onclick="getSearchMood(this.id)" id="searchA7" >Search By A7</button>
+                    <button onclick="getSearchMood(this.id)" id="searchA8" >Search By A8</button>
+                    <button onclick="getSearchMood(this.id)" id="searchA9" >Search By A9</button>
+                    <button onclick="getSearchMood(this.id)" id="searchA10" >Search By A10</button>
+                    <button onclick="getSearchMood(this.id)" id="searchA11" >Search By A11</button>
+                    <button onclick="getSearchMood(this.id)" id="searchA12" >Search By A12</button>
+                </div>
+                <input type="text" id="search" placeholder="Search By ..." onkeyup="searchData(this.value)">
+               
+            </div>
+            
+            <div id="deleteAll">
+
+            </div>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>A1</th>
+                    <th>A2</th>
+                    <th>A3</th>
+                    <th>A4</th>
+                    <th>A5</th>
+                    <th>A6</th>
+                    <th>A7</th>
+                    <th>A8</th>
+                    <th>A9</th>
+                    <th>A10</th>
+                    <th>A11</th>
+                    <th>A12</th>
+                    <th>EDIT</th>
+                    <th>DELETE</th>
+                </tr>
+            <tbody id="tbody">
+               
+            </tbody>
+            </table>
+        </div>
+    </div>
+<script src="./index.js"></script>
+</body>
+</html>
